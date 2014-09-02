@@ -23,11 +23,11 @@ class osxoptions {
   include osx::software_update
 
   class { 'osx::global::key_repeat_delay':
-    delay => 8
+    delay => 30
   }
 
   class { 'osx::global::key_repeat_rate':
-    rate => 4
+    rate => 1
   }
 
   class { 'osx::dock::hot_corners':
