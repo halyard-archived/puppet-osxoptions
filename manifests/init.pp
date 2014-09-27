@@ -241,6 +241,6 @@ class osxoptions {
     key    => 'moduleDict',
     value  => "moduleName -string 'Hyperspace' path -string '/Users/$::boxen_user/Library/Screen Savers/Hyperspace.saver' type -int 0",
     type   => 'dict',
-    require => Package['hyperspace']
+    require => Package['halyard/casks/hyperspace']
   }
 }
