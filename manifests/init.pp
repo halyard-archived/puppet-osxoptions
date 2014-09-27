@@ -235,5 +235,11 @@ class osxoptions {
     type   => 'boolean'
   }
 
-
+  boxen::osx_defaults { 'Set screensaver':
+    user   => $::boxen_user,
+    domain => 'com.apple.screensaver',
+    key    => 'moduleDict',
+    value  => "moduleName -string 'Hyperspace' path -string '/Users/$::boxen_user/Library/Screen Savers/Hyperspace.saver' type -int 0",
+    type   => 'dict'
+  }
 }
