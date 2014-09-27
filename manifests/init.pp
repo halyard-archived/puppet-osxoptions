@@ -236,6 +236,7 @@ class osxoptions {
   }
 
   boxen::osx_defaults { 'Set screensaver':
+    host   => 'currentHost',
     user   => $::boxen_user,
     domain => 'com.apple.screensaver',
     key    => 'moduleDict',
