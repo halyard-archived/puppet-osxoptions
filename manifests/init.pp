@@ -83,6 +83,14 @@ class osxoptions {
     type   => 'boolean'
   }
 
+  boxen::osx_defaults { 'Dark mode UI':
+    user   => $::boxen_user,
+    domain => 'NSGlobalDomain',
+    key    => 'AppleInterfaceStyle',
+    value  => 'Dark',
+    type   => 'string'
+  }
+
   boxen::osx_defaults { 'Disable Resume windows':
     user   => $::boxen_user,
     domain => 'NSGlobalDomain',
