@@ -59,6 +59,14 @@ class osxoptions {
     type   => 'integer'
   }
 
+  boxen::osx_defaults { 'Jump to spot that is clicked':
+    user   => $::boxen_user,
+    domain => 'NSGlobalDomain',
+    key    => 'AppleScrollerPagingBehavior',
+    value  => 1,
+    type   => 'integer'
+  }
+
   boxen::osx_defaults { 'Always show scrollbars':
     user   => $::boxen_user,
     domain => 'NSGlobalDomain',
