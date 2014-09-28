@@ -249,7 +249,7 @@ class osxoptions {
     user   => $::boxen_user,
     domain => 'com.apple.menuextra.clock',
     key    => 'DateFormat',
-    value  => 'EEE MMM d H:mm:ss',
+    value  => 'EEE MMM d  H:mm:ss',
     type   => 'string'
   }
 
