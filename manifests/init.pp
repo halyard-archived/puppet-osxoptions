@@ -244,4 +244,13 @@ class osxoptions {
     type   => 'dict',
     require => Package['halyard/casks/hyperspace']
   }
+
+  boxen::osx_defaults { 'Change screensaver start time':
+    host   => 'currentHost',
+    user   => $::boxen_user,
+    domain => 'com.apple.screensaverk',
+    key    => 'idleTime',
+    value  => 300,
+    type   => 'integer'
+  }
 }
