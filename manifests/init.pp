@@ -312,4 +312,11 @@ class osxoptions {
     value  => ['65', '{enabled = 0;}'],
     type   => 'dict-add'
   }
+
+  boxen::osx_defaults { 'Dim keyboard after 1 minute of inactivity':
+    domain => 'com.apple.BezelServices',
+    key    => 'kDimTime',
+    value  => 300,
+    type   => 'int'
+  }
 }
