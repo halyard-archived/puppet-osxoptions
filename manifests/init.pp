@@ -32,7 +32,6 @@ class osxoptions {
 
   class { 'osx::dock::hot_corners':
     top_right   => 'Start Screen Saver',
-    bottom_left => 'Dashboard'
   }
 
   boxen::osx_defaults { 'Enable Airdrop on all interfaces':
@@ -223,14 +222,6 @@ class osxoptions {
     user   => $::boxen_user,
     domain => 'com.apple.TimeMachine',
     key    => 'DoNotOfferNewDisksForBackup',
-    value  => true,
-    type   => 'boolean'
-  }
-
-  boxen::osx_defaults { 'Show dashboard-in-overlay':
-    user   => $::boxen_user,
-    domain => 'com.apple.dock',
-    key    => 'dashboard-in-overlay',
     value  => true,
     type   => 'boolean'
   }
