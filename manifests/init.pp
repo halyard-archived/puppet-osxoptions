@@ -261,4 +261,20 @@ class osxoptions {
     value  => 'EEE MMM d H:mm:ss',
     type   => 'string'
   }
+
+  boxen::osx_defaults { 'Disable Gatekeeper':
+    user   => 'root',
+    domain => '/var/db/SystemPolicy-prefs.plist',
+    key    => 'enabled',
+    value  => 'no',
+    type   => 'string'
+  }
+
+  boxen::osx_defaults { 'Disable app quarantine':
+    user   => $::boxen_user,
+    domain => 'com.apple.LaunchServices',
+    key    => 'LSQuarantine',
+    value  => false,
+    type   => 'bool'
+  }
 }
