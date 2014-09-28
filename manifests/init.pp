@@ -253,4 +253,12 @@ class osxoptions {
     value  => 300,
     type   => 'integer'
   }
+
+  boxen::osx_defaults { 'Use 24 hour clock with date':
+    user   => $::boxen_user,
+    domain => 'com.apple.menuextra.clock',
+    key    => 'DateFormat',
+    value  => 'EEE MMM d H:mm:ss',
+    type   => 'string'
+  }
 }
