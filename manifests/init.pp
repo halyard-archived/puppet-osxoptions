@@ -268,4 +268,12 @@ class osxoptions {
     value  => false,
     type   => 'bool'
   }
+
+  boxen::osx_defaults { 'Enable firewall':
+    user   => 'root',
+    domain => '/Library/Preferences/com.apple.alf',
+    key    => 'globalstate',
+    value  => 1,
+    type   => 'int'
+  }
 }
