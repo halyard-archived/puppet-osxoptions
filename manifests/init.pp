@@ -274,7 +274,7 @@ class osxoptions {
     domain => '/Library/Preferences/com.apple.alf',
     key    => 'globalstate',
     value  => 1,
-    type   => 'int'
+    type   => 'integer'
   }
 
   boxen::osx_defaults { 'Disable application switcher':
@@ -317,6 +317,13 @@ class osxoptions {
     domain => 'com.apple.BezelServices',
     key    => 'kDimTime',
     value  => 300,
-    type   => 'int'
+    type   => 'integer'
+  }
+
+  boxen::osx_defaults { 'Crank up trackpad speed':
+    domain => 'NSGlobalDomain',
+    key    => 'com.apple.trackpad.scaling',
+    value  => 6,
+    type   => 'integer'
   }
 }
