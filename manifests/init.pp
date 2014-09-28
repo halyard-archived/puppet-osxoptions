@@ -239,7 +239,7 @@ class osxoptions {
   boxen::osx_defaults { 'Change screensaver start time':
     host   => 'currentHost',
     user   => $::boxen_user,
-    domain => 'com.apple.screensaverk',
+    domain => 'com.apple.screensaver',
     key    => 'idleTime',
     value  => 300,
     type   => 'integer'
@@ -275,5 +275,27 @@ class osxoptions {
     key    => 'globalstate',
     value  => 1,
     type   => 'int'
+  }
+
+  boxen::osx_defaults { 'Disable application switcher':
+    domain => 'com.apple.symbolichotkeys',
+    key    => 'AppleSymbolicHotKeys',
+    value  => ['33', '{enabled = 0;}'],
+    type   => 'dict-add'
+  }
+
+  boxen::osx_defaults { 'Disable Mission Control':
+    user   => $::boxen_user,
+    domain => 'com.apple.dock',
+    key    => 'mcx-expose-disabled',
+    value  => true,
+    type   => 'bool'
+  }
+
+  boxen::osx_defaults { 'Disable Dictionary mouseover':
+    domain => 'com.apple.symbolichotkeys',
+    key    => 'AppleSymbolicHotKeys',
+    value  => ['70', '{enabled = 0;}'],
+    type   => 'dict-add'
   }
 }
