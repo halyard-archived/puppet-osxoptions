@@ -298,4 +298,18 @@ class osxoptions {
     value  => ['70', '{enabled = 0;}'],
     type   => 'dict-add'
   }
+
+  boxen::osx_defaults { 'Disable Spotlight search':
+    domain => 'com.apple.symbolichotkeys',
+    key    => 'AppleSymbolicHotKeys',
+    value  => ['64', '{enabled = 0;}'],
+    type   => 'dict-add'
+  }
+
+  boxen::osx_defaults { 'Disable Spotlight window':
+    domain => 'com.apple.symbolichotkeys',
+    key    => 'AppleSymbolicHotKeys',
+    value  => ['65', '{enabled = 0;}'],
+    type   => 'dict-add'
+  }
 }
