@@ -114,20 +114,36 @@ class osxoptions {
     type   => 'integer'
   }
 
-  boxen::osx_defaults { 'Enable right click for global settings':
+  boxen::osx_defaults { 'Enable right click via bottom right corner':
     user   => $::boxen_user,
     domain => 'NSGlobalDomain',
-    key    => 'com.apple.trackpad.enableSecondaryClick',
-    value  => true,
-    type   => 'boolean'
+    key    => 'com.apple.AppleMultitouchTrackpad',
+    value  => ['TrackpadCornerSecondaryClick', '2'],
+    type   => 'dict-add'
   }
 
-  boxen::osx_defaults { 'Enable bottom corner right click for global settings':
+  boxen::osx_defaults { 'Enable right click':
     user   => $::boxen_user,
     domain => 'NSGlobalDomain',
-    key    => 'com.apple.trackpad.trackpadCornerClickBehavior',
-    value  => 1,
-    type   => 'integer'
+    key    => 'com.apple.AppleMultitouchTrackpad',
+    value  => ['TrackpadRightClick', '1'],
+    type   => 'dict-add'
+  }
+
+  boxen::osx_defaults { 'Disable 3 finger horizontal swipe':
+    user   => $::boxen_user,
+    domain => 'NSGlobalDomain',
+    key    => 'com.apple.AppleMultitouchTrackpad',
+    value  => ['TrackpadThreeFingerHorizSwipeGesture', '0'],
+    type   => 'dict-add'
+  }
+
+  boxen::osx_defaults { 'Disable 3 finger vertical swipe':
+    user   => $::boxen_user,
+    domain => 'NSGlobalDomain',
+    key    => 'com.apple.AppleMultitouchTrackpad',
+    value  => ['TrackpadThreeFingerVertSwipeGesture', '0'],
+    type   => 'dict-add'
   }
 
   boxen::osx_defaults { 'Enable right click on bluetooth trackpad':
