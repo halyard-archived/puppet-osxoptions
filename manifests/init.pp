@@ -342,4 +342,11 @@ class osxoptions {
     value  => 6,
     type   => 'integer'
   }
+
+  boxen::osx_defaults { 'Enable feedback on volume change':
+    domain => 'NSGlobalDomain',
+    key    => 'com.apple.sound.beep.feedback',
+    value  => 1,
+    type   => 'integer'
+  }
 }
