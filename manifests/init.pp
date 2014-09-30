@@ -43,7 +43,6 @@ class osxoptions {
   }
 
   boxen::osx_defaults { 'Use list view in Finder':
-    user   => $::boxen_user,
     domain => 'com.apple.Finder',
     key    => 'FXPreferredViewStyle',
     value  => 'Nlsv',
