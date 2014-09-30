@@ -348,4 +348,18 @@ class osxoptions {
     value  => 1,
     type   => 'integer'
   }
+
+  boxen::osx_defaults { 'iTerm2: Open arrangement at startup':
+    domain => 'com.googlecode.iterm2',
+    key    => 'OpenArrangementAtStartup',
+    value  => 1,
+    type   => 'integer'
+  }
+
+  boxen::osx_defaults { 'iTerm2: Open arrangement at startup':
+    domain => 'com.googlecode.iterm2',
+    key    => 'UseLionStyleFullscreen',
+    value  => 0,
+    type   => 'integer'
+  }
 }
