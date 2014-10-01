@@ -299,14 +299,6 @@ class osxoptions {
     type   => 'dict-add'
   }
 
-  boxen::osx_defaults { 'Disable Mission Control':
-    user   => $::boxen_user,
-    domain => 'com.apple.dock',
-    key    => 'mcx-expose-disabled',
-    value  => true,
-    type   => 'bool'
-  }
-
   boxen::osx_defaults { 'Disable Dictionary mouseover':
     domain => 'com.apple.symbolichotkeys',
     key    => 'AppleSymbolicHotKeys',
