@@ -288,7 +288,7 @@ class osxoptions {
     type   => 'integer'
   }
 
-  boxen::osx_defaults { 'iTerm2: Open arrangement at startup':
+  boxen::osx_defaults { 'iTerm2: Use non-Lion fullscreen':
     domain => 'com.googlecode.iterm2',
     key    => 'UseLionStyleFullscreen',
     value  => 0,
