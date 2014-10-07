@@ -113,38 +113,6 @@ class osxoptions {
     type   => 'integer'
   }
 
-  boxen::osx_defaults { 'Enable right click via bottom right corner':
-    user   => $::boxen_user,
-    domain => 'NSGlobalDomain',
-    key    => 'com.apple.AppleMultitouchTrackpad',
-    value  => ['TrackpadCornerSecondaryClick', '2'],
-    type   => 'dict-add'
-  }
-
-  boxen::osx_defaults { 'Enable right click':
-    user   => $::boxen_user,
-    domain => 'NSGlobalDomain',
-    key    => 'com.apple.AppleMultitouchTrackpad',
-    value  => ['TrackpadRightClick', '1'],
-    type   => 'dict-add'
-  }
-
-  boxen::osx_defaults { 'Disable 3 finger horizontal swipe':
-    user   => $::boxen_user,
-    domain => 'NSGlobalDomain',
-    key    => 'com.apple.AppleMultitouchTrackpad',
-    value  => ['TrackpadThreeFingerHorizSwipeGesture', '0'],
-    type   => 'dict-add'
-  }
-
-  boxen::osx_defaults { 'Disable 3 finger vertical swipe':
-    user   => $::boxen_user,
-    domain => 'NSGlobalDomain',
-    key    => 'com.apple.AppleMultitouchTrackpad',
-    value  => ['TrackpadThreeFingerVertSwipeGesture', '0'],
-    type   => 'dict-add'
-  }
-
   boxen::osx_defaults { 'Enable right click on bluetooth trackpad':
     user   => $::boxen_user,
     domain => 'com.apple.driver.AppleBluetoothMultitouch.trackpad',
@@ -290,34 +258,6 @@ class osxoptions {
     key    => 'globalstate',
     value  => 1,
     type   => 'integer'
-  }
-
-  boxen::osx_defaults { 'Disable application switcher':
-    domain => 'com.apple.symbolichotkeys',
-    key    => 'AppleSymbolicHotKeys',
-    value  => ['33', '{enabled = 0;}'],
-    type   => 'dict-add'
-  }
-
-  boxen::osx_defaults { 'Disable Dictionary mouseover':
-    domain => 'com.apple.symbolichotkeys',
-    key    => 'AppleSymbolicHotKeys',
-    value  => ['70', '{enabled = 0;}'],
-    type   => 'dict-add'
-  }
-
-  boxen::osx_defaults { 'Disable Spotlight search':
-    domain => 'com.apple.symbolichotkeys',
-    key    => 'AppleSymbolicHotKeys',
-    value  => ['64', '{enabled = 0;}'],
-    type   => 'dict-add'
-  }
-
-  boxen::osx_defaults { 'Disable Spotlight window':
-    domain => 'com.apple.symbolichotkeys',
-    key    => 'AppleSymbolicHotKeys',
-    value  => ['65', '{enabled = 0;}'],
-    type   => 'dict-add'
   }
 
   boxen::osx_defaults { 'Dim keyboard after 1 minute of inactivity':
