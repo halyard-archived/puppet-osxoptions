@@ -11,7 +11,6 @@ class osxoptions {
   include osx::dock::disable
 
   include osx::finder::show_external_hard_drives_on_desktop
-  include osx::finder::show_mounted_servers_on_desktop
   include osx::finder::show_removable_media_on_desktop
   include osx::finder::empty_trash_securely
   include osx::finder::unhide_library
@@ -216,7 +215,7 @@ class osxoptions {
     key    => 'moduleDict',
     value  => "moduleName -string 'Hyperspace' path -string '/Users/$::boxen_user/Library/Screen Savers/Hyperspace.saver' type -int 0",
     type   => 'dict',
-    require => Package['halyard/casks/hyperspace']
+    require => Package['hyperspace-halyard']
   }
 
   boxen::osx_defaults { 'Change screensaver start time':
