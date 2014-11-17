@@ -68,7 +68,7 @@ class osxoptions {
     user   => $::boxen_user,
     domain => 'NSGlobalDomain',
     key    => 'AppleShowScrollBars',
-    value  => 'Always',
+    value  => 'WhenScrolling',
     type   => 'string'
   }
 
