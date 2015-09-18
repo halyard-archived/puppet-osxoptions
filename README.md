@@ -1,3 +1,5 @@
+**Inactive Project:** No longer maintaining this, I've switched to setting options in individual purpose-driven modules
+
 puppet-osxoptions
 ===========
 
